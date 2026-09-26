@@ -1,4 +1,4 @@
-const API_BASE = "https://api.example.com/api";
+const API_BASE = "https://api.maxigo.in/api";
 
 const TOKEN_KEY = "maxigoStoreToken";
 const USER_KEY = "maxigoStoreUser";
