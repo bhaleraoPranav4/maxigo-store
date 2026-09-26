@@ -1,0 +1,1767 @@
+/* =========================================================
+   MAXIGO PARTNER PANEL
+   APP.CSS - FULL REPLACEMENT
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  background: #f7f5ff;
+  color: #18213a;
+
+  overflow-x: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   MAIN APP
+   ========================================================= */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+
+  background: #f7f5ff;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 290px;
+  height: 100vh;
+
+  background: #ffffff;
+
+  border-right: 1px solid #e8e3f4;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 1000;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #ddd5f5;
+  border-radius: 20px;
+}
+
+
+/* =========================================================
+   MAXIGO LOGO AREA
+   ========================================================= */
+
+.logo {
+  width: 100%;
+  min-height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #f0edf8;
+
+  flex-shrink: 0;
+}
+
+.maxigo-logo {
+  width: 235px;
+  max-width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   PREMIUM BUSINESS CARD
+   ========================================================= */
+
+.business-card {
+  margin: 22px 20px 18px;
+
+  min-height: 108px;
+
+  padding: 16px 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  position: relative;
+
+  border: 1px solid #e5dcff;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #fcfaff 55%,
+      #f8f4ff 100%
+    );
+
+  box-shadow:
+    0 6px 18px rgba(90, 55, 180, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+  flex-shrink: 0;
+}
+
+
+/* Soft background glow */
+
+.business-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  right: -35px;
+  top: -45px;
+
+  border-radius: 50%;
+
+  background: rgba(123, 72, 245, 0.07);
+
+  pointer-events: none;
+}
+
+
+/* Bottom soft glow */
+
+.business-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 80px;
+  height: 80px;
+
+  left: -45px;
+  bottom: -45px;
+
+  border-radius: 50%;
+
+  background: rgba(175, 130, 255, 0.06);
+
+  pointer-events: none;
+}
+
+
+/* Hover */
+
+.business-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #d9ccff;
+
+  box-shadow:
+    0 10px 25px rgba(90, 55, 180, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================================
+   BUSINESS ICON
+   ========================================================= */
+
+.business-icon {
+  width: 62px;
+  height: 62px;
+
+  min-width: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  z-index: 2;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f4efff 0%,
+      #ece4ff 100%
+    );
+
+  border: 1px solid #e8ddff;
+
+  box-shadow:
+    0 5px 12px rgba(103, 55, 240, 0.08),
+    inset 0 1px 3px rgba(255, 255, 255, 0.95);
+
+  font-size: 29px;
+
+  transition: transform 0.25s ease;
+}
+
+
+.business-card:hover .business-icon {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   BUSINESS TEXT
+   ========================================================= */
+
+.business-card > div:last-child {
+  position: relative;
+  z-index: 2;
+
+  min-width: 0;
+
+  flex: 1;
+
+  text-align: center;
+}
+
+
+.business-card strong {
+  display: block;
+
+  max-width: 100%;
+
+  color: #17213b;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  line-height: 1.3;
+
+  letter-spacing: -0.2px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.business-card span {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #777f9b;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .business-card {
+    margin-left: 16px;
+    margin-right: 16px;
+
+    padding: 15px;
+  }
+
+  .business-icon {
+    width: 58px;
+    height: 58px;
+
+    min-width: 58px;
+
+    font-size: 27px;
+  }
+
+  .business-card strong {
+    font-size: 17px;
+  }
+
+  .business-card span {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE SIDEBAR
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+  .business-card {
+    margin: 15px 9px;
+
+    min-height: 62px;
+
+    padding: 7px;
+
+    justify-content: center;
+
+    border-radius: 16px;
+  }
+
+  .business-card > div:last-child {
+    display: none;
+  }
+
+  .business-icon {
+    width: 48px;
+    height: 48px;
+
+    min-width: 48px;
+
+    border-radius: 15px;
+
+    font-size: 23px;
+  }
+}
+/* =========================================================
+   SIDEBAR NAVIGATION
+   ========================================================= */
+
+.sidebar nav {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+
+  padding: 8px 15px 15px;
+}
+
+
+/* =========================================================
+   NAV BUTTON
+   ========================================================= */
+
+.sidebar nav button,
+.sidebar-bottom button {
+  width: 100%;
+  min-height: 58px;
+
+  margin: 0;
+  padding: 0 16px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: transparent;
+
+  color: #64708a;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  font-size: 16px;
+  font-weight: 650;
+
+  text-align: left;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* =========================================================
+   CUSTOM IMAGE LOGOS
+   ========================================================= */
+
+.sidebar-dashboard-logo,
+.sidebar-orders-logo,
+.sidebar-food-logo,
+.sidebar-earnings-logo,
+.sidebar-history-logo,
+.sidebar-profile-logo,
+.sidebar-settings-logo,
+.sidebar-logout-logo {
+  width: 42px;
+  height: 42px;
+
+  min-width: 42px;
+
+  display: block;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   INDIVIDUAL LOGO CONTROL
+   ========================================================= */
+
+.sidebar-dashboard-logo {
+  width: 42px;
+  height: 42px;
+}
+
+.sidebar-orders-logo {
+  width: 42px;
+  height: 42px;
+}
+
+.sidebar-food-logo {
+  width: 42px;
+  height: 42px;
+}
+
+.sidebar-earnings-logo {
+  width: 42px;
+  height: 42px;
+}
+
+.sidebar-history-logo {
+  width: 42px;
+  height: 42px;
+}
+
+.sidebar-profile-logo {
+  width: 42px;
+  height: 42px;
+}
+
+.sidebar-settings-logo {
+  width: 42px;
+  height: 42px;
+}
+
+.sidebar-logout-logo {
+  width: 42px;
+  height: 42px;
+}
+
+
+/* =========================================================
+   NAV TEXT
+   ========================================================= */
+
+.sidebar nav button > span:nth-child(2),
+.sidebar-bottom button > span:nth-child(2) {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   OLD EMOJI ICON SUPPORT
+   ========================================================= */
+
+.sidebar nav button > span:first-child,
+.sidebar-bottom button > span:first-child {
+  width: 24px;
+  min-width: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 19px;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.sidebar nav button:hover,
+.sidebar-bottom button:hover {
+  background: #f5f1ff;
+
+  color: #6738ee;
+}
+
+
+/* =========================================================
+   ACTIVE NAV
+   ========================================================= */
+
+.sidebar nav button.active,
+.sidebar-bottom button.active {
+  background:
+    linear-gradient(
+      135deg,
+      #6632f4 0%,
+      #843ce8 100%
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 22px rgba(105, 52, 238, 0.24);
+}
+
+.sidebar nav button.active:hover,
+.sidebar-bottom button.active:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #6632f4 0%,
+      #843ce8 100%
+    );
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   ORDER BADGE
+   ========================================================= */
+
+.sidebar nav button b {
+  min-width: 28px;
+  height: 28px;
+
+  padding: 0 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #eee9f8;
+
+  color: #747b93;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.sidebar nav button.active b {
+  background: rgba(255, 255, 255, 0.25);
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   SIDEBAR BOTTOM
+   ========================================================= */
+
+.sidebar-bottom {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding: 14px 15px 18px;
+
+  border-top: 1px solid #eeeaf6;
+
+  background: #ffffff;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.sidebar-bottom .logout {
+  color: #ee4c62;
+}
+
+.sidebar-bottom .logout:hover {
+  background: #fff1f3;
+
+  color: #e93450;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.main {
+  width: calc(100% - 290px);
+
+  min-width: 0;
+  min-height: 100vh;
+
+  margin-left: 290px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #f7f5ff;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 900;
+
+  width: 100%;
+  min-height: 80px;
+
+  padding: 14px 32px;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e9e5f4;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.search {
+  width: 100%;
+  max-width: 600px;
+
+  min-width: 200px;
+  height: 52px;
+
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  border: 1px solid #e4def4;
+
+  border-radius: 15px;
+
+  background: #fbfaff;
+
+  color: #7c8198;
+
+  font-size: 21px;
+}
+
+.search input {
+  width: 100%;
+  min-width: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #222a43;
+
+  font-size: 15px;
+}
+
+.search input::placeholder {
+  color: #9ba0b5;
+}
+
+
+/* =========================================================
+   HEADER RIGHT
+   ========================================================= */
+
+.header-right {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   NOTIFICATION
+   ========================================================= */
+
+.notification {
+  width: 50px;
+  height: 50px;
+
+  min-width: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e9e4f5;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  font-size: 20px;
+
+  transition: 0.2s ease;
+}
+
+.notification:hover {
+  background: #f7f2ff;
+}
+
+
+/* =========================================================
+   OWNER AVATAR
+   ========================================================= */
+
+.owner-avatar {
+  width: 52px;
+  height: 52px;
+
+  min-width: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6834f4 0%,
+      #813be9 100%
+    );
+
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 750;
+
+  box-shadow:
+    0 7px 18px rgba(102, 51, 240, 0.22);
+}
+
+
+/* =========================================================
+   OWNER NAME
+   ========================================================= */
+
+.owner-name {
+  min-width: 75px;
+  max-width: 150px;
+}
+
+.owner-name strong {
+  display: block;
+
+  color: #25304b;
+
+  font-size: 15px;
+  font-weight: 750;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.owner-name span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #9398ab;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.content {
+  width: 100% !important;
+  max-width: none !important;
+
+  min-width: 0;
+
+  flex: 1;
+
+  margin: 0;
+
+  padding: 35px 45px 50px;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   REMOVE UNWANTED MAX-WIDTH
+   ========================================================= */
+
+.main > .content {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.content > * {
+  max-width: none;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgba(103, 55, 240, 0.35);
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .sidebar {
+    width: 260px;
+  }
+
+  .main {
+    width: calc(100% - 260px);
+
+    margin-left: 260px;
+  }
+
+  .content {
+    padding: 30px 30px 45px;
+  }
+
+  .logo {
+    min-height: 145px;
+
+    padding: 18px;
+  }
+
+  .maxigo-logo {
+    width: 215px;
+  }
+
+  .business-card {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .sidebar nav {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .sidebar-dashboard-logo,
+  .sidebar-orders-logo,
+  .sidebar-food-logo,
+  .sidebar-earnings-logo,
+  .sidebar-history-logo,
+  .sidebar-profile-logo,
+  .sidebar-settings-logo,
+  .sidebar-logout-logo {
+    width: 39px;
+    height: 39px;
+    min-width: 39px;
+  }
+}
+
+
+/* =========================================================
+   1000px
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .sidebar {
+    width: 245px;
+  }
+
+  .main {
+    width: calc(100% - 245px);
+
+    margin-left: 245px;
+  }
+
+  .header {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .search {
+    max-width: 500px;
+  }
+}
+
+
+/* =========================================================
+   900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    width: 225px;
+  }
+
+  .main {
+    width: calc(100% - 225px);
+
+    margin-left: 225px;
+  }
+
+  .logo {
+    min-height: 135px;
+
+    padding: 16px;
+  }
+
+  .maxigo-logo {
+    width: 190px;
+  }
+
+  .business-card {
+    min-height: 92px;
+
+    margin-top: 18px;
+    margin-bottom: 15px;
+
+    padding: 13px;
+  }
+
+  .business-icon {
+    width: 48px;
+    height: 48px;
+
+    min-width: 48px;
+
+    font-size: 22px;
+  }
+
+  .business-card strong {
+    font-size: 14px;
+  }
+
+  .business-card span {
+    font-size: 12px;
+  }
+
+  .sidebar nav button,
+  .sidebar-bottom button {
+    min-height: 52px;
+
+    padding-left: 12px;
+    padding-right: 12px;
+
+    font-size: 14px;
+  }
+
+  .sidebar-dashboard-logo,
+  .sidebar-orders-logo,
+  .sidebar-food-logo,
+  .sidebar-earnings-logo,
+  .sidebar-history-logo,
+  .sidebar-profile-logo,
+  .sidebar-settings-logo,
+  .sidebar-logout-logo {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+
+  .header {
+    min-height: 72px;
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .content {
+    padding: 25px 18px 40px;
+  }
+}
+
+
+/* =========================================================
+   750px
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+  .sidebar {
+    width: 82px;
+  }
+
+  .main {
+    width: calc(100% - 82px);
+
+    margin-left: 82px;
+  }
+
+  .logo {
+    min-height: 88px;
+
+    padding: 10px;
+  }
+
+  .maxigo-logo {
+    width: 66px;
+    max-width: 66px;
+  }
+
+  .business-card {
+    margin: 15px 9px;
+
+    padding: 8px;
+
+    min-height: 62px;
+
+    justify-content: center;
+
+    border-radius: 14px;
+  }
+
+  .business-card > div:last-child {
+    display: none;
+  }
+
+  .business-icon {
+    width: 48px;
+    height: 48px;
+
+    min-width: 48px;
+  }
+
+  .sidebar nav {
+    padding: 5px 8px;
+  }
+
+  .sidebar nav button,
+  .sidebar-bottom button {
+    min-height: 52px;
+
+    padding: 0;
+
+    justify-content: center;
+
+    gap: 0;
+
+    border-radius: 13px;
+  }
+
+
+  /* =========================================
+     MOBILE CUSTOM LOGOS
+     ========================================= */
+
+  .sidebar-dashboard-logo,
+  .sidebar-orders-logo,
+  .sidebar-food-logo,
+  .sidebar-earnings-logo,
+  .sidebar-history-logo,
+  .sidebar-profile-logo,
+  .sidebar-settings-logo,
+  .sidebar-logout-logo {
+    width: 38px;
+    height: 38px;
+
+    min-width: 38px;
+  }
+
+
+  /* =========================================
+     HIDE TEXT
+     ========================================= */
+
+  .sidebar nav button > span:nth-child(2),
+  .sidebar-bottom button > span:nth-child(2),
+  .sidebar nav button b {
+    display: none;
+  }
+
+
+  /* =========================================
+     OLD EMOJIS
+     ========================================= */
+
+  .sidebar nav button > span:first-child,
+  .sidebar-bottom button > span:first-child {
+    width: 100%;
+    min-width: 100%;
+
+    font-size: 20px;
+  }
+
+
+  .sidebar-bottom {
+    padding: 8px;
+  }
+
+
+  /* =========================================
+     HEADER
+     ========================================= */
+
+  .header {
+    min-height: 68px;
+
+    padding: 9px 12px;
+
+    gap: 9px;
+  }
+
+  .search {
+    height: 45px;
+
+    min-width: 0;
+
+    padding: 0 12px;
+
+    font-size: 18px;
+  }
+
+  .search input {
+    font-size: 13px;
+  }
+
+  .notification {
+    width: 43px;
+    height: 43px;
+
+    min-width: 43px;
+
+    border-radius: 12px;
+
+    font-size: 17px;
+  }
+
+  .owner-avatar {
+    width: 43px;
+    height: 43px;
+
+    min-width: 43px;
+
+    font-size: 17px;
+  }
+
+  .owner-name {
+    display: none;
+  }
+
+  .content {
+    padding: 22px 14px 35px;
+  }
+}
+
+
+/* =========================================================
+   550px
+   ========================================================= */
+
+@media (max-width: 550px) {
+
+  .sidebar {
+    width: 72px;
+  }
+
+  .main {
+    width: calc(100% - 72px);
+
+    margin-left: 72px;
+  }
+
+  .logo {
+    min-height: 80px;
+
+    padding: 8px;
+  }
+
+  .maxigo-logo {
+    width: 56px;
+    max-width: 56px;
+  }
+
+  .business-card {
+    margin: 12px 7px;
+
+    min-height: 55px;
+
+    padding: 6px;
+  }
+
+  .business-icon {
+    width: 43px;
+    height: 43px;
+
+    min-width: 43px;
+
+    border-radius: 12px;
+
+    font-size: 19px;
+  }
+
+  .sidebar nav {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .sidebar nav button,
+  .sidebar-bottom button {
+    min-height: 49px;
+
+    border-radius: 11px;
+  }
+
+  .sidebar-dashboard-logo,
+  .sidebar-orders-logo,
+  .sidebar-food-logo,
+  .sidebar-earnings-logo,
+  .sidebar-history-logo,
+  .sidebar-profile-logo,
+  .sidebar-settings-logo,
+  .sidebar-logout-logo {
+    width: 35px;
+    height: 35px;
+
+    min-width: 35px;
+  }
+
+  .header {
+    min-height: 64px;
+
+    padding: 8px 9px;
+  }
+
+  .search {
+    height: 41px;
+
+    padding: 0 9px;
+
+    font-size: 16px;
+  }
+
+  .search input {
+    font-size: 12px;
+  }
+
+  .notification {
+    width: 39px;
+    height: 39px;
+
+    min-width: 39px;
+  }
+
+  .owner-avatar {
+    width: 39px;
+    height: 39px;
+
+    min-width: 39px;
+  }
+
+  .content {
+    padding: 18px 9px 30px;
+  }
+}
+
+
+/* =========================================================
+   400px
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .sidebar {
+    width: 62px;
+  }
+
+  .main {
+    width: calc(100% - 62px);
+
+    margin-left: 62px;
+  }
+
+  .logo {
+    min-height: 70px;
+
+    padding: 6px;
+  }
+
+  .maxigo-logo {
+    width: 48px;
+    max-width: 48px;
+  }
+
+  .business-card {
+    margin: 9px 5px;
+
+    min-height: 48px;
+
+    border: none;
+
+    background: #f7f3ff;
+  }
+
+  .business-icon {
+    width: 38px;
+    height: 38px;
+
+    min-width: 38px;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+  }
+
+  .sidebar nav {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .sidebar nav button,
+  .sidebar-bottom button {
+    min-height: 45px;
+
+    border-radius: 10px;
+  }
+
+  .sidebar-dashboard-logo,
+  .sidebar-orders-logo,
+  .sidebar-food-logo,
+  .sidebar-earnings-logo,
+  .sidebar-history-logo,
+  .sidebar-profile-logo,
+  .sidebar-settings-logo,
+  .sidebar-logout-logo {
+    width: 31px;
+    height: 31px;
+
+    min-width: 31px;
+  }
+
+  .sidebar-bottom {
+    padding: 6px 5px;
+  }
+
+  .header {
+    min-height: 60px;
+
+    padding: 7px;
+  }
+
+  .search {
+    height: 38px;
+
+    padding: 0 8px;
+  }
+
+  .search input {
+    font-size: 11px;
+  }
+
+  .notification {
+    width: 36px;
+    height: 36px;
+
+    min-width: 36px;
+  }
+
+  .owner-avatar {
+    width: 36px;
+    height: 36px;
+
+    min-width: 36px;
+
+    font-size: 15px;
+  }
+
+  .content {
+    padding: 15px 7px 25px;
+  }
+}
+
+/* =====================================================
+   MAXIGO LEGAL FOOTER
+===================================================== */
+
+.app-legal-footer {
+  width: 100%;
+
+  margin-top: 30px;
+
+  padding: 18px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  background: #211b3e;
+
+  color: white;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.app-legal-left {
+  display: flex;
+
+  flex-direction: column;
+
+  flex-shrink: 0;
+}
+
+
+.app-legal-left strong {
+  color: #ffffff;
+
+  font-size: 16px;
+}
+
+
+.app-legal-left span {
+  margin-top: 3px;
+
+  color: #aaa4c0;
+
+  font-size: 10px;
+}
+
+
+.app-legal-links {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  flex-wrap: wrap;
+}
+
+
+.app-legal-links button {
+  border: none;
+
+  background: transparent;
+
+  color: #bbb6cd;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  padding: 4px;
+
+  transition: 0.2s ease;
+}
+
+
+.app-legal-links button:hover {
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+.app-legal-copy {
+  color: #aaa4c0;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   LEGAL FOOTER RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .app-legal-footer {
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  .app-legal-left {
+    align-items: center;
+  }
+
+  .app-legal-copy {
+    white-space: normal;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .app-legal-footer {
+    padding: 18px 14px;
+
+    gap: 12px;
+  }
+
+  .app-legal-links {
+    gap: 8px 12px;
+  }
+
+  .app-legal-links button {
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   MAXIGO LEGAL FOOTER
+========================================================= */
+
+.app-legal-footer {
+  width: 100%;
+  min-height: 76px;
+
+  padding: 16px 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  background: #ffffff;
+
+  border-top: 1px solid #ebe7f5;
+
+  box-sizing: border-box;
+}
+
+
+/* LEFT */
+
+.app-legal-left {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  min-width: 140px;
+}
+
+.app-legal-left strong {
+  color: #5b2eff;
+
+  font-size: 16px;
+
+  font-weight: 900;
+}
+
+.app-legal-left span {
+  color: #9a94aa;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+/* LINKS */
+
+.app-legal-links {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px 18px;
+}
+
+.app-legal-links button {
+  border: none;
+
+  background: transparent;
+
+  padding: 4px 0;
+
+  color: #6d6680;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.app-legal-links button:hover {
+  color: #5b2eff;
+
+  transform: translateY(-1px);
+}
+
+
+/* COPYRIGHT */
+
+.app-legal-copy {
+  color: #aaa4b4;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .app-legal-footer {
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 20px;
+  }
+
+  .app-legal-left {
+    align-items: center;
+  }
+
+  .app-legal-links {
+    max-width: 800px;
+  }
+
+  .app-legal-copy {
+    white-space: normal;
+  }
+
+}

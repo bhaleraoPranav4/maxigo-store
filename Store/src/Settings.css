@@ -1,0 +1,1717 @@
+/* ================================
+   MAXIGO PARTNER PANEL
+   SETTINGS CSS
+================================ */
+
+.settings-page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.settings-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #17203a;
+  letter-spacing: -0.5px;
+}
+
+.settings-header p {
+  margin: 7px 0 0;
+  color: #7b849c;
+  font-size: 14px;
+}
+
+
+/* ================================
+   MAIN LAYOUT
+================================ */
+
+.settings-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  gap: 22px;
+  align-items: start;
+}
+
+.settings-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.settings-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* ================================
+   CARD
+================================ */
+
+.settings-card {
+  background: #ffffff;
+  border: 1px solid #ece8f7;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(76, 61, 120, 0.06);
+  overflow: hidden;
+}
+
+.settings-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 21px 23px;
+  border-bottom: 1px solid #f0edf7;
+}
+
+.settings-card-header h2 {
+  margin: 0;
+  color: #1c2541;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.settings-card-header p {
+  margin: 5px 0 0;
+  color: #8991a6;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.settings-header-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #eee8ff, #fce9f4);
+  font-size: 20px;
+}
+
+
+/* ================================
+   SETTINGS LIST
+================================ */
+
+.settings-list {
+  padding: 4px 23px;
+}
+
+.setting-row {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid #f2eff7;
+}
+
+.setting-row:last-child {
+  border-bottom: none;
+}
+
+.setting-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6f2ff;
+  color: #6846d8;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.setting-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.setting-info strong {
+  display: block;
+  color: #252d45;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.setting-info span {
+  display: block;
+  margin-top: 4px;
+  color: #9299aa;
+  font-size: 12px;
+}
+
+
+/* ================================
+   TOGGLE
+================================ */
+
+.toggle {
+  width: 48px;
+  height: 26px;
+  padding: 3px;
+  border: none;
+  border-radius: 30px;
+  background: #dfe2ea;
+  cursor: pointer;
+  position: relative;
+  transition: 0.25s ease;
+  flex-shrink: 0;
+}
+
+.toggle span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: 0.25s ease;
+}
+
+.toggle.active {
+  background: linear-gradient(135deg, #6747d9, #a14ee8);
+}
+
+.toggle.active span {
+  transform: translateX(22px);
+}
+
+.toggle:hover {
+  opacity: 0.9;
+}
+
+
+/* ================================
+   PASSWORD FORM
+================================ */
+
+.password-form {
+  padding: 23px;
+}
+
+.password-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.password-field label {
+  color: #353d55;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.password-field input {
+  width: 100%;
+  height: 46px;
+  box-sizing: border-box;
+  padding: 0 14px;
+  border: 1px solid #e2dfeb;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #252d45;
+  font-size: 13px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.password-field input::placeholder {
+  color: #a8adba;
+}
+
+.password-field input:focus {
+  border-color: #8056df;
+  box-shadow: 0 0 0 3px rgba(128, 86, 223, 0.10);
+}
+
+.password-input {
+  position: relative;
+  width: 100%;
+}
+
+.password-input input {
+  padding-right: 48px;
+}
+
+.password-input button {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.password-input button:hover {
+  background: #f4f1fb;
+}
+
+.password-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+
+/* ================================
+   PASSWORD MESSAGE
+================================ */
+
+.password-message {
+  margin-top: 17px;
+  padding: 11px 13px;
+  border-radius: 9px;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.password-message.success {
+  color: #087443;
+  background: #eafaf2;
+  border: 1px solid #ccefdc;
+}
+
+.password-message.error {
+  color: #bd3b54;
+  background: #fff0f3;
+  border: 1px solid #ffd5dc;
+}
+
+
+/* ================================
+   CHANGE PASSWORD BUTTON
+================================ */
+
+.change-password-btn {
+  margin-top: 20px;
+  height: 45px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6544d7, #a04ce6);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(103, 70, 216, 0.20);
+  transition: 0.2s ease;
+}
+
+.change-password-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(103, 70, 216, 0.28);
+}
+
+
+/* ================================
+   ACCOUNT CARD
+================================ */
+
+.account-card {
+  overflow: hidden;
+}
+
+.account-profile {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 20px 21px;
+  background: linear-gradient(
+    135deg,
+    #faf8ff 0%,
+    #ffffff 100%
+  );
+}
+
+.account-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6945d9, #a14ce7);
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 800;
+  box-shadow: 0 5px 14px rgba(104, 70, 217, 0.22);
+}
+
+.account-profile strong {
+  display: block;
+  color: #222b44;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.account-profile span {
+  display: block;
+  margin-top: 4px;
+  color: #8c94a7;
+  font-size: 12px;
+}
+
+.account-details {
+  padding: 0 21px 20px;
+}
+
+.account-details > div {
+  padding: 13px 0;
+  border-top: 1px solid #f0edf5;
+}
+
+.account-details span {
+  display: block;
+  margin-bottom: 4px;
+  color: #9198a9;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.account-details strong {
+  display: block;
+  color: #343c53;
+  font-size: 12.5px;
+  font-weight: 650;
+  word-break: break-word;
+}
+
+
+/* ================================
+   LOGIN SESSIONS
+================================ */
+
+.session-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 19px 20px;
+}
+
+.session-device {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f1ff;
+  font-size: 18px;
+}
+
+.session-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.session-info strong {
+  display: block;
+  color: #30384f;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.session-info span {
+  display: block;
+  margin-top: 3px;
+  color: #858da0;
+  font-size: 11px;
+}
+
+.session-info small {
+  display: block;
+  margin-top: 4px;
+  color: #24a26a;
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
+.session-active {
+  color: #2db477;
+  font-size: 15px;
+  animation: pulseDot 1.8s infinite;
+}
+
+@keyframes pulseDot {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* ================================
+   LOGOUT OTHER DEVICES
+================================ */
+
+.logout-other-btn {
+  width: calc(100% - 40px);
+  height: 40px;
+  margin: 0 20px 20px;
+  border: 1px solid #e8e2f3;
+  border-radius: 9px;
+  background: #faf9fd;
+  color: #6547c7;
+  font-size: 11.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.logout-other-btn:hover {
+  background: #f3effd;
+  border-color: #d9cff2;
+}
+
+
+/* ================================
+   SUPPORT CARD
+================================ */
+
+.support-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    #f0eaff 0%,
+    #fff0f7 100%
+  );
+  border: 1px solid #e7dcf5;
+}
+
+.support-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  font-size: 20px;
+  box-shadow: 0 4px 12px rgba(93, 68, 153, 0.08);
+}
+
+.support-card h3 {
+  margin: 1px 0 5px;
+  color: #272f48;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.support-card p {
+  margin: 0;
+  color: #858da0;
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+
+.support-card button {
+  margin-top: 11px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #7046d5;
+  font-size: 11.5px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.support-card button:hover {
+  color: #a043d8;
+}
+
+
+/* ================================
+   APP VERSION
+================================ */
+
+.app-version {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 5px 0;
+  color: #9aa0b0;
+  font-size: 10.5px;
+}
+
+.app-version strong {
+  color: #7f8799;
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
+
+/* ================================
+   HOVER EFFECTS
+================================ */
+
+.settings-card {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.settings-card:hover {
+  box-shadow: 0 8px 25px rgba(76, 61, 120, 0.08);
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1100px) {
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .account-card {
+    grid-column: span 1;
+  }
+
+  .support-card {
+    grid-column: span 2;
+  }
+
+  .app-version {
+    grid-column: span 2;
+  }
+}
+
+
+/* ================================
+   TABLET SMALL
+================================ */
+
+@media (max-width: 800px) {
+  .settings-page {
+    padding-bottom: 25px;
+  }
+
+  .settings-header h1 {
+    font-size: 24px;
+  }
+
+  .settings-layout {
+    gap: 16px;
+  }
+
+  .settings-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .support-card,
+  .app-version {
+    grid-column: auto;
+  }
+
+  .password-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 550px) {
+  .settings-header {
+    margin-bottom: 17px;
+  }
+
+  .settings-header h1 {
+    font-size: 22px;
+  }
+
+  .settings-header p {
+    font-size: 12px;
+  }
+
+  .settings-card {
+    border-radius: 14px;
+  }
+
+  .settings-card-header {
+    padding: 17px;
+    gap: 11px;
+  }
+
+  .settings-header-icon {
+    width: 39px;
+    height: 39px;
+    border-radius: 11px;
+    font-size: 17px;
+  }
+
+  .settings-card-header h2 {
+    font-size: 15px;
+  }
+
+  .settings-card-header p {
+    font-size: 11px;
+  }
+
+  .settings-list {
+    padding: 2px 17px;
+  }
+
+  .setting-row {
+    min-height: 70px;
+    gap: 10px;
+  }
+
+  .setting-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+  }
+
+  .setting-info strong {
+    font-size: 12.5px;
+  }
+
+  .setting-info span {
+    font-size: 10.5px;
+  }
+
+  .toggle {
+    width: 44px;
+    height: 24px;
+  }
+
+  .toggle span {
+    width: 18px;
+    height: 18px;
+  }
+
+  .toggle.active span {
+    transform: translateX(20px);
+  }
+
+  .password-form {
+    padding: 17px;
+  }
+
+  .password-row {
+    gap: 14px;
+  }
+
+  .change-password-btn {
+    width: 100%;
+  }
+
+  .account-profile {
+    padding: 17px;
+  }
+
+  .account-details {
+    padding: 0 17px 17px;
+  }
+
+  .session-item {
+    padding: 17px;
+  }
+
+  .logout-other-btn {
+    width: calc(100% - 34px);
+    margin-left: 17px;
+    margin-right: 17px;
+  }
+
+  .support-card {
+    padding: 17px;
+  }
+}
+
+
+/* ================================
+   VERY SMALL MOBILE
+================================ */
+
+@media (max-width: 380px) {
+  .settings-header h1 {
+    font-size: 20px;
+  }
+
+  .setting-row {
+    gap: 8px;
+  }
+
+  .setting-icon {
+    display: none;
+  }
+
+  .setting-info strong {
+    font-size: 12px;
+  }
+
+  .setting-info span {
+    font-size: 10px;
+  }
+
+  .password-field input {
+    height: 43px;
+    font-size: 12px;
+  }
+
+  .support-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 17px;
+  }
+}
+
+/* =========================================
+   SETTINGS PAGE - FONT SIZE ONLY
+   ========================================= */
+
+.settings-page {
+  font-size: 15px;
+}
+
+/* Header */
+.settings-header h1 {
+  font-size: 30px;
+}
+
+.settings-header p {
+  font-size: 16px;
+}
+
+/* Cards */
+.settings-card-header h2 {
+  font-size: 21px;
+}
+
+.settings-card-header p {
+  font-size: 14px;
+}
+
+.settings-header-icon {
+  font-size: 23px;
+}
+
+/* Setting Rows */
+.setting-info strong {
+  font-size: 16px;
+}
+
+.setting-info span {
+  font-size: 14px;
+}
+
+.setting-icon {
+  font-size: 17px;
+}
+
+/* Toggle */
+.toggle {
+  font-size: 14px;
+}
+
+/* Password */
+.password-field label {
+  font-size: 14px;
+}
+
+.password-field input {
+  font-size: 15px;
+}
+
+.password-field input::placeholder {
+  font-size: 14px;
+}
+
+.password-input button {
+  font-size: 18px;
+}
+
+.password-message {
+  font-size: 14px;
+}
+
+.change-password-btn {
+  font-size: 15px;
+}
+
+/* Account */
+.account-profile strong {
+  font-size: 17px;
+}
+
+.account-profile span {
+  font-size: 14px;
+}
+
+.account-avatar {
+  font-size: 20px;
+}
+
+.account-details span {
+  font-size: 13px;
+}
+
+.account-details strong {
+  font-size: 14px;
+}
+
+/* Login Sessions */
+.session-device {
+  font-size: 22px;
+}
+
+.session-info strong {
+  font-size: 15px;
+}
+
+.session-info span {
+  font-size: 13px;
+}
+
+.session-info small {
+  font-size: 12px;
+}
+
+.session-active {
+  font-size: 14px;
+}
+
+.logout-other-btn {
+  font-size: 14px;
+}
+
+/* Support */
+.support-icon {
+  font-size: 27px;
+}
+
+.support-card h3 {
+  font-size: 18px;
+}
+
+.support-card p {
+  font-size: 14px;
+}
+
+.support-card button {
+  font-size: 14px;
+}
+
+/* App Version */
+.app-version span {
+  font-size: 13px;
+}
+
+.app-version strong {
+  font-size: 14px;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+  .settings-header h1 {
+    font-size: 25px;
+  }
+
+  .settings-header p {
+    font-size: 14px;
+  }
+
+  .settings-card-header h2 {
+    font-size: 19px;
+  }
+
+  .settings-card-header p {
+    font-size: 13px;
+  }
+
+  .setting-info strong {
+    font-size: 15px;
+  }
+
+  .setting-info span {
+    font-size: 13px;
+  }
+
+  .password-field label {
+    font-size: 13px;
+  }
+
+  .password-field input {
+    font-size: 14px;
+  }
+
+  .password-field input::placeholder {
+    font-size: 13px;
+  }
+
+  .change-password-btn {
+    font-size: 14px;
+  }
+
+  .account-profile strong {
+    font-size: 16px;
+  }
+
+  .account-profile span {
+    font-size: 13px;
+  }
+
+  .account-details span {
+    font-size: 12px;
+  }
+
+  .account-details strong {
+    font-size: 13px;
+  }
+
+  .session-info strong {
+    font-size: 14px;
+  }
+
+  .session-info span {
+    font-size: 12px;
+  }
+
+  .session-info small {
+    font-size: 11px;
+  }
+
+  .logout-other-btn {
+    font-size: 13px;
+  }
+
+  .support-card h3 {
+    font-size: 17px;
+  }
+
+  .support-card p {
+    font-size: 13px;
+  }
+
+  .support-card button {
+    font-size: 13px;
+  }
+
+  .app-version span {
+    font-size: 12px;
+  }
+
+  .app-version strong {
+    font-size: 13px;
+  }
+}
+
+
+
+/* =========================================
+   DELETE ACCOUNT - DANGER ZONE
+========================================= */
+
+.danger-zone-card {
+  border: 1px solid #f2d7dd;
+  background: #ffffff;
+}
+
+.danger-header {
+  border-bottom: 1px solid #f6e4e7;
+}
+
+.danger-icon {
+  background: linear-gradient(
+    135deg,
+    #fff0f2,
+    #ffe7ec
+  ) !important;
+
+  color: #d83b59;
+}
+
+.danger-zone-content {
+  padding: 22px 23px;
+}
+
+.danger-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+
+  padding: 15px 16px;
+
+  border-radius: 12px;
+
+  background: #fff7f8;
+
+  border: 1px solid #f6dfe4;
+}
+
+.danger-warning-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #ffe8ed;
+
+  font-size: 18px;
+}
+
+.danger-warning strong {
+  display: block;
+
+  color: #9e2e45;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.danger-warning span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #8d6570;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.delete-account-btn {
+  margin-top: 17px;
+
+  height: 44px;
+
+  padding: 0 18px;
+
+  border: 1px solid #e6aeb9;
+
+  border-radius: 10px;
+
+  background: #fff5f6;
+
+  color: #c53250;
+
+  font-size: 13px;
+
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.delete-account-btn:hover {
+  background: #ffecef;
+
+  border-color: #db8e9d;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 15px rgba(190, 48, 76, 0.10);
+}
+
+
+/* =========================================
+   DELETE ACCOUNT MODAL
+========================================= */
+
+.delete-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(25, 20, 42, 0.58);
+
+  backdrop-filter: blur(5px);
+
+  animation: deleteOverlayIn 0.2s ease;
+}
+
+@keyframes deleteOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+.delete-modal {
+  width: 100%;
+  max-width: 470px;
+
+  padding: 28px;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #eee7f2;
+
+  box-shadow:
+    0 25px 70px rgba(37, 25, 66, 0.24);
+
+  animation: deleteModalIn 0.25s ease;
+}
+
+@keyframes deleteModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+.delete-modal-icon {
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    #fff0f2,
+    #ffe3e9
+  );
+
+  font-size: 25px;
+
+  border: 1px solid #f8d9df;
+}
+
+
+.delete-modal h2 {
+  margin: 0;
+
+  text-align: center;
+
+  color: #242b42;
+
+  font-size: 21px;
+
+  font-weight: 800;
+}
+
+
+.delete-modal-description {
+  margin: 9px 0 18px;
+
+  text-align: center;
+
+  color: #7e879b;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+}
+
+
+.delete-modal-warning {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  padding: 13px 14px;
+
+  margin-bottom: 19px;
+
+  border-radius: 11px;
+
+  background: #fff7f8;
+
+  border: 1px solid #f5dce2;
+}
+
+.delete-modal-warning strong {
+  color: #a72f47;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+.delete-modal-warning span {
+  color: #8a6670;
+
+  font-size: 11.5px;
+
+  line-height: 1.5;
+}
+
+
+.delete-confirm-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #343c53;
+
+  font-size: 12.5px;
+
+  font-weight: 650;
+}
+
+.delete-confirm-label strong {
+  color: #c43250;
+
+  font-weight: 800;
+}
+
+
+.delete-confirm-input {
+  width: 100%;
+
+  height: 46px;
+
+  box-sizing: border-box;
+
+  padding: 0 13px;
+
+  border: 1px solid #ded9e7;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #252d45;
+
+  font-size: 14px;
+
+  font-weight: 650;
+
+  transition: 0.2s ease;
+}
+
+.delete-confirm-input::placeholder {
+  color: #aaaeb9;
+
+  font-weight: 500;
+}
+
+.delete-confirm-input:focus {
+  border-color: #d45b73;
+
+  box-shadow:
+    0 0 0 3px rgba(212, 91, 115, 0.10);
+}
+
+
+.delete-error {
+  margin-top: 9px;
+
+  padding: 10px 12px;
+
+  border-radius: 9px;
+
+  background: #fff0f3;
+
+  border: 1px solid #ffd5dc;
+
+  color: #bd3b54;
+
+  font-size: 12px;
+
+  font-weight: 650;
+}
+
+
+.delete-modal-actions {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 11px;
+
+  margin-top: 20px;
+}
+
+
+.cancel-delete-btn,
+.confirm-delete-btn {
+  height: 44px;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.cancel-delete-btn {
+  border: 1px solid #e3deeb;
+
+  background: #faf9fc;
+
+  color: #625d73;
+}
+
+.cancel-delete-btn:hover {
+  background: #f4f1f8;
+
+  border-color: #d5cfdf;
+}
+
+
+.confirm-delete-btn {
+  border: 1px solid #ca3a56;
+
+  background: linear-gradient(
+    135deg,
+    #c73552,
+    #df526e
+  );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 6px 15px rgba(197, 53, 80, 0.18);
+}
+
+.confirm-delete-btn:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(197, 53, 80, 0.25);
+}
+
+
+/* =========================================
+   DELETE ACCOUNT - TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .danger-zone-content {
+    padding: 18px 17px;
+  }
+
+  .danger-warning {
+    padding: 13px;
+  }
+
+  .delete-account-btn {
+    width: 100%;
+  }
+
+  .delete-modal {
+    max-width: 440px;
+
+    padding: 23px;
+  }
+
+}
+
+
+/* =========================================
+   DELETE ACCOUNT - MOBILE
+========================================= */
+
+@media (max-width: 550px) {
+
+  .danger-zone-content {
+    padding: 17px;
+  }
+
+  .danger-warning {
+    gap: 10px;
+  }
+
+  .danger-warning-icon {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+  }
+
+  .danger-warning strong {
+    font-size: 12.5px;
+  }
+
+  .danger-warning span {
+    font-size: 11px;
+  }
+
+  .delete-account-btn {
+    height: 43px;
+
+    font-size: 13px;
+  }
+
+  .delete-modal {
+    padding: 21px;
+
+    border-radius: 17px;
+  }
+
+  .delete-modal h2 {
+    font-size: 19px;
+  }
+
+  .delete-modal-description {
+    font-size: 12px;
+  }
+
+  .delete-modal-actions {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+  }
+
+  .cancel-delete-btn,
+  .confirm-delete-btn {
+    height: 43px;
+  }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .delete-modal-overlay {
+    padding: 12px;
+  }
+
+  .delete-modal {
+    padding: 18px;
+  }
+
+  .delete-modal-icon {
+    width: 52px;
+    height: 52px;
+
+    font-size: 22px;
+  }
+
+  .delete-modal h2 {
+    font-size: 18px;
+  }
+
+  .delete-modal-warning span {
+    font-size: 10.5px;
+  }
+
+}
+
+
+
+/* =========================================
+   LANGUAGE SETTINGS
+========================================= */
+
+.language-settings-card {
+  overflow: hidden;
+}
+
+.language-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.language-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 18px;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+  text-align: left;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.language-option:hover {
+  border-color: #6c3df4;
+  transform: translateY(-1px);
+}
+
+.language-option.active {
+  border-color: #6c3df4;
+  background: #f7f3ff;
+  box-shadow: 0 4px 15px rgba(108, 61, 244, 0.08);
+}
+
+.language-flag {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+  background: #f5f5f5;
+
+  font-size: 24px;
+}
+
+.language-info {
+  flex: 1;
+}
+
+.language-info strong {
+  display: block;
+
+  color: #222;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.language-info small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #777;
+  font-size: 12px;
+}
+
+.language-check {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #6c3df4;
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   MOBILE LANGUAGE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .language-option {
+    padding: 13px 14px;
+  }
+
+  .language-flag {
+    width: 38px;
+    height: 38px;
+    font-size: 21px;
+  }
+
+  .language-info strong {
+    font-size: 14px;
+  }
+
+  .language-info small {
+    font-size: 11px;
+  }
+
+}
