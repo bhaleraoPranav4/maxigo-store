@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./CommissionSettings.css";
 
-const API_BASE_URL = "http://localhost:8080/api";
+const API_BASE_URL = "https://api.maxigo.in/api";
 
 function getAdminToken() {
   return (
