@@ -2960,46 +2960,25 @@ export function LanguageProvider({
   ===================================================== */
 
   const t = (key) => {
-
-    if (!key) {
-
+    if (key == null || key === "") {
       return "";
-
     }
 
+    const safeKey = String(key);
+    const currentTranslation = translations[language]?.[safeKey];
 
-    const currentTranslation =
-      translations[
-        language
-      ]?.[key];
-
-
-    if (
-      currentTranslation !==
-      undefined
-    ) {
-
+    // React text children must be renderable values, not objects such as RegExp.
+    if (typeof currentTranslation === "string" || typeof currentTranslation === "number") {
       return currentTranslation;
-
     }
 
+    const englishTranslation = translations.en?.[safeKey];
 
-    const englishTranslation =
-      translations.en?.[key];
-
-
-    if (
-      englishTranslation !==
-      undefined
-    ) {
-
+    if (typeof englishTranslation === "string" || typeof englishTranslation === "number") {
       return englishTranslation;
-
     }
 
-
-    return key;
-
+    return safeKey;
   };
 
 
